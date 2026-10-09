@@ -1,9 +1,12 @@
+require('dotenv').config();
+
 const dbConfig = {
-    host: "localhost",
-    user: "admin",
-    password: "SuperSecreta123!",
-    database: "produccion"
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
 };
 
+const apiKey = process.env.STRIPE_API_KEY;
+
 console.log("Conectando a la base de datos...");
-const apiKey = "sk_live_51H8xK2eZvKYlo2C9FJ3mXnQw4RtYp7UvBiA";
